@@ -1,6 +1,7 @@
 **# BCards API with Node.js**
 
 **##To initiate pnpm type:** `npm i`
+
 **##To start the server type:** `pnpm watch`
 
 **## Overview**
