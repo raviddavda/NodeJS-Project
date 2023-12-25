@@ -1,5 +1,8 @@
 **# BCards API with Node.js**
 
+**##To initiate pnpm type:** `npm i`
+**##To start the server type:** `pnpm watch`
+
 **## Overview**
 
 This Node.js project showcasing my API implementing a login system and a business card creation feature. It covers:
