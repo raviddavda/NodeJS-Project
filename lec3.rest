@@ -1,0 +1,147 @@
+### GET people
+GET http://localhost:8080/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTcwMzMzMjkyMH0.qphcL2OlmZCxYO8ts0DTvuicjUhoq_1kEAlMK_VBRq0
+
+
+### ADD user
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Jean",
+    "last": "Kiristein"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "jeank@behind.com",
+  "isBusiness": true,
+  "password": "123456aA!"
+}
+
+### LOGIN user
+POST http://localhost:8080/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email":"admin@admin.com",
+  "password":"123456aA!"
+}
+
+### DELETE jean by id
+DELETE http://localhost:8080/api/v1/users/658054a88e12382d4707e67a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzA1OTB9.pr-DmtXHlwDF1CRpelRHBD7mn4UYjkHCqnLzD1nDIbY
+
+### UPDATE user
+PUT http://localhost:8080/api/v1/users/6586c6bf053f8e49503d3b21
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzE1NTJ9.6lISoRLr92I_jKMz0wcQe0Fo_M9_H2dl_Ln4NHVDj_Q
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Jean",
+    "last": "Kiristein"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "jeank@behind.com",
+  "isBusiness": false,
+  "password": "123456aA!"
+}
+
+### PATCH jean by id
+PATCH http://localhost:8080/api/v1/users/6586c6bf053f8e49503d3b21
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImplYW5rQGJlaGluZC5jb20iLCJpYXQiOjE3MDMzMzE1NTJ9.6lISoRLr92I_jKMz0wcQe0Fo_M9_H2dl_Ln4NHVDj_Q
+Content-Type: application/json
+
+{
+  "isBusiness": false
+}
+
+### GET all cards
+GET http://localhost:8080/api/v1/cards
+
+### CREATE card
+POST http://localhost:8080/api/v1/cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyZW5qQHBhdGhzLmNvbSIsImlhdCI6MTcwMzM1MzEyMn0.VxqgsRXQ8wgYRVTH9BdqlPgLXRXtEG-BahIxDXBgw7M
+Content-Type: application/json
+
+{
+  "title": "Card1",
+  "subtitle": "Card1",
+  "description":"Card 1",
+  "phone": "050-8123091",
+  "email":"erenj@paths.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://miro.medium.com/v2/resize:fit:1358/1*jPuEs4dGcUJSI46ZjBG_ew.jpeg"
+  }
+}
+
+### GET my cards
+GET http://localhost:8080/api/v1/cards/my-cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1pa2FzYWpAY2FiaW4uY29tIiwiaWF0IjoxNzAzMzU2NDIzfQ.hzmfq9Y8tA7HQTjhjr9ojse4Ad2XxynSpHjrtqY1Wjw
+
+
+### GET card by ID
+GET http://localhost:8080/api/v1/cards/65871b323acef2376b715c94
+
+
+### PUT card by ID
+PUT http://localhost:8080/api/v1/cards/65871b323acef2376b715c94
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyZW5qQHBhdGhzLmNvbSIsImlhdCI6MTcwMzQxMTExM30.i35cvVXmoIyX0DjCOikG4hOKRsnSvurEFViyvENgZQE
+Content-Type: application/json
+
+{
+  "title": "Card12",
+  "subtitle": "Card12",
+  "description":"Card 1",
+  "phone": "050-8123091",
+  "email":"erenj@paths.com",
+  "address": {
+    "street": "123 Main St",
+    "city": "Shiganshina",
+    "country": "Paradis",
+    "houseNumber":13,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://miro.medium.com/v2/resize:fit:1358/1*jPuEs4dGcUJSI46ZjBG_ew.jpeg"
+  }
+}
+
+### LIKE card by ID
+PATCH http://localhost:8080/api/v1/cards/65871b323acef2376b715c94
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVyZW5qQHBhdGhzLmNvbSIsImlhdCI6MTcwMzQxMTExM30.i35cvVXmoIyX0DjCOikG4hOKRsnSvurEFViyvENgZQE
+
+### DELETE card by ID
+DELETE http://localhost:8080/api/v1/cards/65881f7e64350a0c739b9145
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImlhdCI6MTcwMzQyMTI4OX0.sK2_Liu-YaV7Fa96UQYSx8Spraf_SevQ18gw-zzKkFQ

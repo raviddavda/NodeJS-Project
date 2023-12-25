@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bcards API Documentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Bcards API Documentation</h1>
+  </header>
+  <main>
+    <h2>User Endpoints</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Permissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/api/v1/users/login</td>
+          <td>POST</td>
+          <td>Authenticate a user and obtain a session token</td>
+          <td>Any user</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users</td>
+          <td>POST</td>
+          <td>Create a new user account</td>
+          <td>Any user</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users/:id</td>
+          <td>GET</td>
+          <td>Retrieve details of a specific user</td>
+          <td>Admin or account owner</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users</td>
+          <td>GET</td>
+          <td>Retrieve a list of all users</td>
+          <td>Admin only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users/:id</td>
+          <td>PUT</td>
+          <td>Edit the details of a user account</td>
+          <td>Account owner only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users/:id</td>
+          <td>PATCH</td>
+          <td>Change business account status</td>
+          <td>Account owner only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/users/:id</td>
+          <td>DELETE</td>
+          <td>Delete a user account</td>
+          <td>Admin or account owner</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Business Card Endpoints</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Description</th>
+          <th>Permissions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/api/v1/cards</td>
+          <td>GET</td>
+          <td>Retrieve a list of all business cards</td>
+          <td>Any user</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards</td>
+          <td>POST</td>
+          <td>Create a new business card</td>
+          <td>Business status or Admin account only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards/my-cards</td>
+          <td>GET</td>
+          <td>Retrieve all cards created by the current user</td>
+          <td>Card owner only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards/:id</td>
+          <td>GET</td>
+          <td>Retrieve details of a specific card by ID</td>
+          <td>Any user</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards/:id</td>
+          <td>PUT</td>
+          <td>Edit the details of a card</td>
+          <td>Admin or account owner only</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards/:id</td>
+          <td>PATCH</td>
+          <td>Like a card</td>
+          <td>Any user</td>
+        </tr>
+        <tr>
+          <td>/api/v1/cards/:id</td>
+          <td>DELETE</td>
+          <td>Delete a card</td>
+          <td>Admin or account owner only</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+
+</html>
