@@ -60,3 +60,5 @@ This Node.js project showcasing my API implementing a login system and a busines
 3. Fill in the required card information.
 4. Submit the form to create a new card.
 5. View created business cards.
+
+**.rest file was used for testing api interactions, and can be used for further reference and help.**
