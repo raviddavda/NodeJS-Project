@@ -48,11 +48,12 @@ This Node.js project showcasing my API implementing a login system and a busines
 - **Like a card:** `PATCH /api/v1/cards/:id`
 - **Delete a card(Admin or account owner only):** `DELETE /api/v1/cards/:id`
 
-**## Usage**
+**##Admin credentials**
 
-<h4>Admin credentials</h4>
-login: admin@admin.com
-password: 123456aA!
+- **login: admin@admin.com**
+- **password: 123456aA!**
+
+**## Usage**
 
 1. Register a new user or log in with existing credentials.
 2. Access the business card creation form.
